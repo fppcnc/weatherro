@@ -1,0 +1,37 @@
+.search-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.info-icon {
+    margin-left: 8px;
+    cursor: pointer;
+    position: relative;
+}
+
+.tooltip {
+    position: fixed; /* Use fixed positioning to follow the cursor */
+    background-color: #555;
+    color: #fff;
+    text-align: center; /* Change to left align for better readability */
+    border-radius: 6px;
+    padding: 5px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none; /* Prevent the tooltip from interfering with mouse events */
+    max-width: 300px; /* Set a maximum width */
+    word-wrap: break-word; /* Enable word wrap */
+    white-space: normal; /* Ensure the text can break into multiple lines */
+}
+
+.info-icon:hover + .tooltip {
+    opacity: 1;
+}
