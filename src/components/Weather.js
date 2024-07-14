@@ -1,12 +1,8 @@
 import React from 'react';
+import useWeatherData from '../hooks/useWeatherData';
 
 const Weather = ({ data }) => {
-    const { description, icon } = data.weather[0];
-    const { temp, temp_min, temp_max, feels_like } = data.main;
-    const iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
-    const degreeSymbol = '\u00B0C';
-
-
+    const { description, iconUrl, temp, temp_min, temp_max, feels_like, degreeSymbol } = useWeatherData(data);
 
     return (
         <div className="weather-info">
