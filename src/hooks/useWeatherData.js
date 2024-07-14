@@ -7,10 +7,10 @@ const useWeatherData = (data) => {
     return {
         description,
         iconUrl,
-        temp,
-        temp_min,
-        temp_max,
-        feels_like,
+        temp: Math.round(temp),
+        temp_min: Math.round(temp_min),
+        temp_max: Math.round(temp_max),
+        feels_like: Math.round(feels_like),
         degreeSymbol,
     };
 };
