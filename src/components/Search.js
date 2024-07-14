@@ -1,23 +1,12 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+import useTooltip from '../hooks/useTooltip';
 import './Search.css';
 
 const Search = ({ fetchWeather, reset }) => {
     const [city, setCity] = useState('');
-    const [tooltipStyle, setTooltipStyle] = useState({ visibility: 'hidden', left: '0px', top: '0px' });
-
-    const handleMouseEnter = () => {
-        setTooltipStyle(prevStyle => ({ ...prevStyle, visibility: 'visible' }));
-    };
-
-    const handleMouseMove = (e) => {
-        setTooltipStyle({ visibility: 'visible', left: `${e.clientX + 10}px`, top: `${e.clientY + 10}px` });
-    };
-
-    const handleMouseLeave = () => {
-        setTooltipStyle(prevStyle => ({ ...prevStyle, visibility: 'hidden' }));
-    };
+    const { tooltipStyle, handleMouseEnter, handleMouseMove, handleMouseLeave } = useTooltip();
 
     const handleSubmit = (e) => {
         e.preventDefault();
