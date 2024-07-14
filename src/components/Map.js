@@ -4,58 +4,47 @@ import { Map as OLMap, View } from 'ol';
 import { Tile as TileLayer } from 'ol/layer';
 import { OSM as OSMSource } from 'ol/source';
 import { fromLonLat } from 'ol/proj';
-import { Feature } from 'ol';
-import { Point } from 'ol/geom';
-import { Style, Icon } from 'ol/style';
-import { Vector as VectorLayer } from 'ol/layer';
-import { Vector as VectorSource } from 'ol/source';
+import './Map.css';
 
 const Map = ({ lat, lon }) => {
     const mapRef = useRef(null);
+    const licenseRef = useRef(null);
 
     useEffect(() => {
         const map = new OLMap({
             target: mapRef.current,
             layers: [
                 new TileLayer({
-                    source: new OSMSource(),
+                    source: new OSMSource({
+                        attributions: [],
+                    }),
                 }),
             ],
             view: new View({
                 center: fromLonLat([lon, lat]),
                 zoom: 10,
             }),
+            controls: [], // Disable default controls, including zoom buttons
         });
 
-        const iconFeature = new Feature({
-            geometry: new Point(fromLonLat([lon, lat])),
-        });
-
-        const iconStyle = new Style({
-            image: new Icon({
-                anchor: [0.5, 1],
-                src: 'https://openlayers.org/en/latest/examples/data/icon.png',
-            }),
-        });
-
-        iconFeature.setStyle(iconStyle);
-
-        const vectorSource = new VectorSource({
-            features: [iconFeature],
-        });
-
-        const vectorLayer = new VectorLayer({
-            source: vectorSource,
-        });
-
-        map.addLayer(vectorLayer);
+        // Set the custom copyright and license information
+        if (licenseRef.current) {
+            licenseRef.current.innerHTML = `
+        Map data &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>
+      `;
+        }
 
         return () => {
             map.setTarget(null);
         };
     }, [lat, lon]);
 
-    return <div ref={mapRef} style={{ width: '100%', height: '400px' }} />;
+    return (
+        <div className="map-container-wrapper">
+            <div className="map-container" ref={mapRef}></div>
+            <div className="license-container" ref={licenseRef}></div>
+        </div>
+    );
 };
 
 export default Map;
