@@ -26,10 +26,16 @@ const App = () => {
         }
     };
 
+    const reset = () => {
+        setWeatherData(null);
+        setLoading(false);
+        setError(null);
+    };
+
     return (
         <div className="App">
             <h1>Weatherro</h1>
-            <Search fetchWeather={fetchWeather} />
+            <Search fetchWeather={fetchWeather} reset={reset} />
             {loading && <p>Loading...</p>}
             {error && <p>{error}</p>}
             {weatherData && (
