@@ -4,7 +4,7 @@
 
 ## Overview
 
-![Weatherro](path_to_screenshot_image) <!-- Update with the actual path to the screenshot -->
+![Weatherro](https://github.com/fppcnc/portfolio2/blob/master/public/assets/projectsPreview/weatherro.png?raw=true)
 
 *Weatherro provides up-to-date weather information for any city you search for. Designed with a modern interface using React, it dynamically fetches weather data from OpenWeatherMap and displays relevant background images using the Pexels API.*
 
