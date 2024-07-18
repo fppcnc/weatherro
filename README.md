@@ -1,6 +1,6 @@
 # Weatherro
 
-*Your personal weather assistant with dynamic backgrounds*
+*Your personal weather assistant*
 
 ## Overview
 
