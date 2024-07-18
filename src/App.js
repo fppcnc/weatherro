@@ -2,6 +2,7 @@ import React from "react";
 import Search from "./components/Search";
 import Weather from "./components/Weather";
 import Map from "./components/Map";
+import BackgroundImage from "./components/BackgroundImage";
 import useWeather from "./hooks/useWeather";
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
                 <>
                     <Weather data={weatherData} />
                     <Map lat={weatherData.coord.lat} lon={weatherData.coord.lon} />
+                    {weatherData && <BackgroundImage description={weatherData.weather[0].description} />}
                 </>
             )}
         </div>

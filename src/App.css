@@ -3,6 +3,10 @@
     font-family: 'Arial', sans-serif;
     text-align: center;
     padding: 20px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
 }
 
 /* Container for the app content */
