@@ -54,9 +54,9 @@
 .weather-info img {
     width: 75px;
     height: 75px;
-    background-color: rgba(45, 45, 45, 0.6);
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    /*background-color: rgba(45, 45, 45, 0.6);*/
+    /*border-radius: 8px;*/
+    /*box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);*/
     padding: 10px;
 }
 
