@@ -10,6 +10,7 @@ const App = () => {
 
     return (
         <div className="App">
+            <BackgroundImage description={weatherData ? weatherData.weather[0].description : null} />
             <h1>Weatherro</h1>
             <Search fetchWeather={fetchWeather} reset={reset} />
             {loading && <p>Loading...</p>}
@@ -18,7 +19,6 @@ const App = () => {
                 <>
                     <Weather data={weatherData} />
                     <Map lat={weatherData.coord.lat} lon={weatherData.coord.lon} />
-                    {weatherData && <BackgroundImage description={weatherData.weather[0].description} />}
                 </>
             )}
         </div>
