@@ -18,8 +18,17 @@
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 0.9rem;
+    z-index: 10;
 }
 
 .image-credit a {
     color: #fff;
+}
+
+@media (max-width: 768px) {
+    .image-credit {
+        font-size: 0.75rem;
+        bottom: 5px;
+        right: 5px;
+    }
 }
