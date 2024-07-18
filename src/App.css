@@ -1,4 +1,4 @@
-/* General styling for the app */
+
 .App {
     font-family: 'Arial', sans-serif;
     text-align: center;
@@ -9,15 +9,23 @@
     min-height: 100vh;
 }
 
-/* Container for the app content */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+h1 {
+    font-size: 3rem;
+    color: #ff6f61;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    font-family: 'Pacifico', cursive;
 }
 
-/* Responsive layout for different devices */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 @media (min-width: 1024px) {
     .container {
         width: 80%;

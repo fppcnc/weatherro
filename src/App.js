@@ -4,6 +4,7 @@ import Weather from "./components/Weather";
 import Map from "./components/Map";
 import BackgroundImage from "./components/BackgroundImage";
 import useWeather from "./hooks/useWeather";
+import "./App.css";
 
 const App = () => {
     const { weatherData, loading, error, fetchWeather, reset } = useWeather();
