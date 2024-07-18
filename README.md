@@ -1,6 +1,6 @@
 # Weatherro
 
-*Your personal weather assistant*
+*Your personal weather assistant.*
 
 ## Overview
 
