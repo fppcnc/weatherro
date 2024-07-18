@@ -24,13 +24,11 @@ const Map = ({ lat, lon }) => {
                 center: fromLonLat([lon, lat]),
                 zoom: 10,
             }),
-            controls: [], // Disable default controls, including zoom buttons
+            controls: [],
         });
-
-        // Set the custom copyright and license information
         if (licenseRef.current) {
             licenseRef.current.innerHTML = `
-        Map data by <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>
+        Map data by <a href="https://openstreetmap.org/copyright">OpenStreetMap</a>
       `;
         }
 
