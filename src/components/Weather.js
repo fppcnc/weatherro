@@ -16,8 +16,8 @@ const Weather = ({data}) => {
                 <div className="weather-info-content">
                     <div className="weather-info-text">
                         <p>Temperature: {temp} {degreeSymbol}</p>
-                        <p>Temperature Minimum: {temp_min} {degreeSymbol}</p>
-                        <p>Temperature Maximum: {temp_max} {degreeSymbol}</p>
+                        <p>Min. Temperature: {temp_min} {degreeSymbol}</p>
+                        <p>Max. Temperature: {temp_max} {degreeSymbol}</p>
                         <p>Feels Like: {feels_like} {degreeSymbol}</p>
                     </div>
                     <div className="img-container">
