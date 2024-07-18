@@ -44,8 +44,10 @@ const Search = ({ fetchWeather, reset }) => {
                         Example - London, GB or New York, US.
                     </div>
                 </div>
-                <button type="submit">Search</button>
-                <button type="button" onClick={handleReset}>Reset</button>
+                <div className="button-container">
+                    <button type="submit" className="search-button">Search</button>
+                    <button type="button" className="reset-button" onClick={handleReset}>Reset</button>
+                </div>
             </form>
         </div>
     );
