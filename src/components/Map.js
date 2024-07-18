@@ -30,7 +30,7 @@ const Map = ({ lat, lon }) => {
         // Set the custom copyright and license information
         if (licenseRef.current) {
             licenseRef.current.innerHTML = `
-        Map data &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>
+        Map data by <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>
       `;
         }
 
