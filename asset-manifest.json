@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/weatherro/static/css/main.b419bb39.css",
+    "main.js": "/weatherro/static/js/main.d6a61d12.js",
+    "index.html": "/weatherro/index.html",
+    "main.b419bb39.css.map": "/weatherro/static/css/main.b419bb39.css.map",
+    "main.d6a61d12.js.map": "/weatherro/static/js/main.d6a61d12.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b419bb39.css",
+    "static/js/main.d6a61d12.js"
+  ]
+}
