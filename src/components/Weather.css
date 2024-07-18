@@ -67,3 +67,8 @@
     color: #555;
 }
 
+@media (max-width: 768px) {
+    .weather-info {
+        height: 300px;
+    }
+}
