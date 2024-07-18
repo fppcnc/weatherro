@@ -25,7 +25,7 @@ input[type="text"] {
 button {
     padding: 10px 15px;
     font-size: 1rem;
-    border: none;
+    border: solid 0.2px;
     border-radius: 4px;
     cursor: pointer;
 }
@@ -63,6 +63,7 @@ button {
     opacity: 0;
     transition: opacity 0.3s;
     pointer-events: none;
+    border: solid 0.2px;
 }
 
 .info-icon:hover + .tooltip {
